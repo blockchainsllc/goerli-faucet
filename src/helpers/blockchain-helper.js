@@ -10,7 +10,7 @@ module.exports = function (app) {
 				web3 = new Web3(web3.currentProvider)
 			}
 			else {
-				web3 = new Web3(new Web3.providers.HttpProvider(config.Ethereum[config.environment].rpc))
+				web3 = new Web3(new Web3.providers.HttpProvider(config.Ethereum.prod.rpc))
 			}
 
 			if (typeof web3 !== 'undefined') {
